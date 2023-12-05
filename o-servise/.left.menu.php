@@ -16,13 +16,6 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Обратная связь", 
-		SITE_DIR."/o-servise/contacts/obratnaya-svyaz/", 
-		Array(), 
-		Array(), 
-		"CSite::InDir('/o-servise/contacts/index.php')" 
-	),
-	Array(
 		"Новости", 
 		SITE_DIR."/o-servise/news/", 
 		Array(), 
