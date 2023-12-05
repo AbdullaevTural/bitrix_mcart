@@ -23,14 +23,14 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"ЛK продавца", 
-		SITE_DIR."/lk-prod/index.php/", 
+		SITE_DIR."/lk-prod/", 
 		Array(), 
 		Array(), 
 		"CSite::InGroup(array(7))" 
 	),
 	Array(
 		"ЛK покупателя", 
-		SITE_DIR."/lk-pokup/index.php/", 
+		SITE_DIR."/lk-pokup/", 
 		Array(), 
 		Array(), 
 		"CSite::InGroup(array(6))" 

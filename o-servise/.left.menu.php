@@ -1,23 +1,30 @@
 <?
-$sMenuTemplate = "/o-servise";
+$sMenuTemplate = "/o-servise/";
 $aMenuLinks = Array(
 	Array(
 		"Вакансии", 
-		SITE_DIR."/o-servise/vakansii", 
+		SITE_DIR."/o-servise/vakansii/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Контакты", 
-		SITE_DIR."/o-servise/contacts", 
+		SITE_DIR."/o-servise/contacts/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
+		"Обратная связь", 
+		SITE_DIR."/o-servise/contacts/obratnaya-svyaz/", 
+		Array(), 
+		Array(), 
+		"CSite::InDir('/o-servise/contacts/index.php')" 
+	),
+	Array(
 		"Новости", 
-		SITE_DIR."/news", 
+		SITE_DIR."/o-servise/news/", 
 		Array(), 
 		Array(), 
 		"" 
