@@ -54,7 +54,9 @@ $APPLICATION->SetTitle("Вакансии ");
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Список вакансий ",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"SEF_MODE" => "N",
+		"SEF_FOLDER" => "/o-servise/vakansii/",
+		"SEF_MODE" => "Y",
+		"SEF_URL_TEMPLATES" => Array("detail"=>"#ELEMENT_CODE#/","news"=>"","section"=>""),
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
@@ -70,7 +72,6 @@ $APPLICATION->SetTitle("Вакансии ");
 		"USE_RATING" => "N",
 		"USE_REVIEW" => "N",
 		"USE_RSS" => "N",
-		"USE_SEARCH" => "N",
-		"VARIABLE_ALIASES" => Array("ELEMENT_ID"=>"ELEMENT_ID","SECTION_ID"=>"SECTION_ID")
+		"USE_SEARCH" => "N"
 	)
 );?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

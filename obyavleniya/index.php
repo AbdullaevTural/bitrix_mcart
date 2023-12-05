@@ -53,7 +53,9 @@ $APPLICATION->SetTitle("Объявления ");
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Список объявлений",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"SEF_MODE" => "N",
+		"SEF_FOLDER" => "/obyavleniya/",
+		"SEF_MODE" => "Y",
+		"SEF_URL_TEMPLATES" => Array("detail"=>"#ELEMENT_CODE#/","news"=>"","section"=>""),
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
@@ -69,8 +71,7 @@ $APPLICATION->SetTitle("Объявления ");
 		"USE_RATING" => "N",
 		"USE_REVIEW" => "N",
 		"USE_RSS" => "N",
-		"USE_SEARCH" => "N",
-		"VARIABLE_ALIASES" => Array("ELEMENT_ID"=>"ELEMENT_ID","SECTION_ID"=>"SECTION_ID")
+		"USE_SEARCH" => "N"
 	)
 );?><br>
  <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
