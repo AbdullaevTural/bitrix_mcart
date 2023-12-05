@@ -1,0 +1,33 @@
+<?
+$sMenuTemplate = "/o-servise";
+$aMenuLinks = Array(
+	Array(
+		"Вакансии", 
+		SITE_DIR."/o-servise/vakansii", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		SITE_DIR."/o-servise/contacts", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Новости", 
+		SITE_DIR."/news", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Агенты", 
+		SITE_DIR."/o-servise/agenty.php", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
