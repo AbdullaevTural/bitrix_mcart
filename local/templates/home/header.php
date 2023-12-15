@@ -1,4 +1,4 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+?><?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <?
 IncludeTemplateLangFile(__FILE__);
 ?>
@@ -9,6 +9,19 @@ IncludeTemplateLangFile(__FILE__);
   <?$APPLICATION->ShowHead();?>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <?
+$APPLICATION->AddHeadScript('/local/templates/home/js/jquery-3.3.1.min.js');
+$APPLICATION->AddHeadScript('/local/templates/home/js/jquery-migrate-3.0.1.min.js');
+$APPLICATION->AddHeadScript('/local/templates/home/js/jquery-ui.js');
+$APPLICATION->AddHeadScript('/local/templates/home/js/popper.min.js');
+$APPLICATION->AddHeadScript('/local/templates/home/js/bootstrap.min.js');
+$APPLICATION->AddHeadScript('/local/templates/home/js/owl.carousel.min.js');
+$APPLICATION->AddHeadScript('/local/templates/home/js/mediaelement-and-player.min.js');
+$APPLICATION->AddHeadScript('/local/templates/home/js/jquery.stellar.min.js');
+$APPLICATION->AddHeadScript('/local/templates/home/js/jquery.countdown.min.js');
+$APPLICATION->AddHeadScript('/local/templates/home/js/jquery.magnific-popup.min.js');
+$APPLICATION->AddHeadScript('/local/templates/home/js/bootstrap-datepicker.min.js');
+$APPLICATION->AddHeadScript('/local/templates/home/js/aos.js');
+$APPLICATION->AddHeadScript('/local/templates/home/js/main.js');
 $APPLICATION->SetAdditionalCSS("https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500");
 $APPLICATION->SetAdditionalCSS("/local/templates/home/fonts/icomoon/style.css");
 $APPLICATION->SetAdditionalCSS("/local/templates/home/css/bootstrap.min.css");
