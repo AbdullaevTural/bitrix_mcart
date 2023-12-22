@@ -7,9 +7,9 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 	<div class="site-blocks-cover" style="background-image: url(local/templates/home/images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
 		<div class="text">
 			<h2><?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	".default", 
-	array(
+	"bitrix:news.list",
+	".default",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -20,8 +20,9 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "N",
+		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
+		"COMPONENT_TEMPLATE" => ".default",
 		"DETAIL_URL" => "",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
@@ -29,10 +30,7 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"FIELD_CODE" => array(0=>"",1=>"",),
 		"FILTER_NAME" => "arrFilter",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "6",
@@ -51,10 +49,7 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"PROPERTY_CODE" => array(0=>"",1=>"",),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -66,13 +61,12 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N",
-		"COMPONENT_TEMPLATE" => ".default"
+		"STRICT_SECTION_CHECK" => "N"
 	),
-	false,
-	array(
-		"ACTIVE_COMPONENT" => "N"
-	)
+false,
+Array(
+	'ACTIVE_COMPONENT' => 'N'
+)
 );?>853 S Lucerne Blvd</h2>
 			<p class="location">
  <span class="property-icon icon-room"></span> Los Angeles, CA 90005
@@ -133,7 +127,9 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 			</div>
 			<div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
 				<div class="feature d-flex align-items-start">
-					 <?$APPLICATION->IncludeComponent(
+ <span class="icon mr-3 flaticon-location"></span>
+					<div class="text">
+						 <?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"",
 	Array(
@@ -143,6 +139,7 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 		"PATH" => "local/templates/home/components/property.php"
 	)
 );?>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -154,33 +151,28 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 			<div class="col-12">
 				<div class="site-section-title">
 					<h2>New Properties for You<?$APPLICATION->IncludeComponent(
-	"bitrix:news.line", 
-	".default", 
-	array(
+	"bitrix:news.line",
+	".default",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "300",
 		"CACHE_TYPE" => "A",
+		"COMPONENT_TEMPLATE" => ".default",
 		"DETAIL_URL" => "",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"IBLOCKS" => array(
-			0 => "6",
-		),
+		"FIELD_CODE" => array(0=>"",1=>"",),
+		"IBLOCKS" => array(0=>"6",),
 		"IBLOCK_TYPE" => "ads",
 		"NEWS_COUNT" => "9",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC",
-		"COMPONENT_TEMPLATE" => ".default"
+		"SORT_ORDER2" => "ASC"
 	),
-	false,
-	array(
-		"ACTIVE_COMPONENT" => "N"
-	)
+false,
+Array(
+	'ACTIVE_COMPONENT' => 'N'
+)
 );?></h2>
 				</div>
 			</div>
@@ -452,33 +444,28 @@ Array(
 			<div class="col-md-7 text-center">
 				<div class="site-section-title">
 					<h2>Our Blog<?$APPLICATION->IncludeComponent(
-	"bitrix:news.line", 
-	".default", 
-	array(
+	"bitrix:news.line",
+	".default",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "300",
 		"CACHE_TYPE" => "A",
+		"COMPONENT_TEMPLATE" => ".default",
 		"DETAIL_URL" => "",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"IBLOCKS" => array(
-			0 => "1",
-		),
+		"FIELD_CODE" => array(0=>"",1=>"",),
+		"IBLOCKS" => array(0=>"1",),
 		"IBLOCK_TYPE" => "news",
 		"NEWS_COUNT" => "3",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC",
-		"COMPONENT_TEMPLATE" => ".default"
+		"SORT_ORDER2" => "ASC"
 	),
-	false,
-	array(
-		"ACTIVE_COMPONENT" => "N"
-	)
+false,
+Array(
+	'ACTIVE_COMPONENT' => 'N'
+)
 );?></h2>
 				</div>
 			</div>

@@ -122,9 +122,9 @@ $APPLICATION->AddHeadScript('/local/templates/home/js/main.js');
 </div>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:menu", 
-	".default", 
+	"top_multi", 
 	array(
-		"COMPONENT_TEMPLATE" => ".default",
+		"COMPONENT_TEMPLATE" => "top_multi",
 		"ROOT_MENU_TYPE" => "top",
 		"MENU_CACHE_TYPE" => "A",
 		"MENU_CACHE_TIME" => "3600",
@@ -135,10 +135,11 @@ $APPLICATION->AddHeadScript('/local/templates/home/js/main.js');
 		"CHILD_MENU_TYPE" => "left",
 		"USE_EXT" => "N",
 		"DELAY" => "N",
-		"ALLOW_MULTI_SELECT" => "N"
+		"ALLOW_MULTI_SELECT" => "N",
+		"MENU_THEME" => "site"
 	),
 	false,
 	array(
-		"ACTIVE_COMPONENT" => "N"
+		"ACTIVE_COMPONENT" => "Y"
 	)
 );?>
