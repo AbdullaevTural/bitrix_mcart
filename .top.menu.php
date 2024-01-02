@@ -2,35 +2,35 @@
 $aMenuLinks = Array(
 	Array(
 		"Главная", 
-		SITE_DIR."/index.php", 
+		"/index.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Объявления", 
-		SITE_DIR."/obyavleniya/", 
+		"obyavleniya/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"О сервисе", 
-		SITE_DIR."/o-servise/", 
+		"o-servise/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"ЛK продавца", 
-		SITE_DIR."/lk-prod/", 
+		"lk-prod/", 
 		Array(), 
 		Array(), 
 		"CSite::InGroup(array(7))" 
 	),
 	Array(
 		"ЛK покупателя", 
-		SITE_DIR."/lk-pokup/", 
+		"lk-pokup/", 
 		Array(), 
 		Array(), 
 		"CSite::InGroup(array(6))" 

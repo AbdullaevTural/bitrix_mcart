@@ -18,18 +18,9 @@ IncludeTemplateLangFile(__FILE__);?> <footer class="site-footer">
 		</div>
 		<div class="col-lg-4 mb-5 mb-lg-0">
 			<div class="row mb-5">
-				 <?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "local/templates/home/components/navigations.php"
-	)
-);?><?$APPLICATION->IncludeComponent(
+				<?$APPLICATION->IncludeComponent(
 	"bitrix:menu", 
-	".default", 
+	"menu_bottom", 
 	array(
 		"ALLOW_MULTI_SELECT" => "N",
 		"CHILD_MENU_TYPE" => "left",
@@ -42,11 +33,11 @@ IncludeTemplateLangFile(__FILE__);?> <footer class="site-footer">
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"ROOT_MENU_TYPE" => "top",
 		"USE_EXT" => "N",
-		"COMPONENT_TEMPLATE" => ".default"
+		"COMPONENT_TEMPLATE" => "menu_bottom"
 	),
 	false,
 	array(
-		"ACTIVE_COMPONENT" => "N"
+		"ACTIVE_COMPONENT" => "Y"
 	)
 );?>
 			</div>
