@@ -216,9 +216,12 @@ Array(
 			</div>
 		</div>
 
-<?$APPLICATION->IncludeComponent("bitrix:news.line", "services", array(
-	"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"CACHE_GROUPS" => "Y",
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news.line", 
+	"services", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"CACHE_GROUPS" => "N",
 		"CACHE_TIME" => "300",
 		"CACHE_TYPE" => "A",
 		"DETAIL_URL" => "",
@@ -234,11 +237,12 @@ Array(
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC"
+		"SORT_ORDER2" => "ASC",
+		"COMPONENT_TEMPLATE" => "services"
 	),
 	false,
 	array(
-	"ACTIVE_COMPONENT" => "Y"
+		"ACTIVE_COMPONENT" => "Y"
 	)
 );?>
 
