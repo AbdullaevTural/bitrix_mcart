@@ -1,6 +1,6 @@
 <?php
 $arUrlRewrite=array (
-  5 => 
+  7 => 
   array (
     'CONDITION' => '#^/o-servise/vakansii/#',
     'RULE' => '',

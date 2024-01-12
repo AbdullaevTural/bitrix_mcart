@@ -31,11 +31,9 @@ for($index = 0; $index < $itemSize; $index++)
 	$title = htmlspecialcharsex($arResult[$index]["TITLE"]);
 	$arrow = ($index > 0? '<i class="fa fa-angle-right"></i>' : '');
 
-	if($arResult[$index]["LINK"] <> "" && $index != $itemSize-1)
+	if($arResult[$index]["LINK"] <> "" && $index<(count($arResult)-1))
 	{
-		$strReturn .= '
-<a href="'.$arResult[$index]["LINK"].'"title="'.$title.'" itemprop="item"><span itemprop="name">'.$title.'</span></a> <span class="mx-2 text-white">•</span>
-';
+		$strReturn .= '<a href="'.$arResult[$index]["LINK"].'"title="'.$title.'" itemprop="item"><span itemprop="name">'.$title.'</span></a> <span class="mx-2 text-white">•</span>';
 	}
 	else
 	{

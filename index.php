@@ -180,30 +180,33 @@ Array(
 		</div>
 	</div>
 </div>
-<?$APPLICATION->IncludeComponent("bitrix:news.line", "ads", Array(
-	"ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
-		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
-		"CACHE_TIME" => "300",	// Время кеширования (сек.)
-		"CACHE_TYPE" => "A",	// Тип кеширования
-		"COMPONENT_TEMPLATE" => ".default",
-		"DETAIL_URL" => "",	// URL, ведущий на страницу с содержимым элемента раздела
-		"FIELD_CODE" => array(	// Поля
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news.line", 
+	"ads", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "300",
+		"CACHE_TYPE" => "A",
+		"COMPONENT_TEMPLATE" => "ads",
+		"DETAIL_URL" => "",
+		"FIELD_CODE" => array(
 			0 => "",
 			1 => "",
 		),
-		"IBLOCKS" => array(	// Код информационного блока
+		"IBLOCKS" => array(
 			0 => "6",
 		),
-		"IBLOCK_TYPE" => "ads",	// Тип информационного блока
-		"NEWS_COUNT" => "9",	// Количество новостей на странице
-		"SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
-		"SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
-		"SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
-		"SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
+		"IBLOCK_TYPE" => "ads",
+		"NEWS_COUNT" => "9",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC"
 	),
 	false,
 	array(
-	"ACTIVE_COMPONENT" => "Y"
+		"ACTIVE_COMPONENT" => "Y"
 	)
 );?>
 <div class="site-section">
@@ -227,7 +230,8 @@ Array(
 		"DETAIL_URL" => "",
 		"FIELD_CODE" => array(
 			0 => "",
-			1 => "",
+			1 => "PROPERTY_LINKS",
+			2 => "",
 		),
 		"IBLOCKS" => array(
 			0 => "7",
@@ -258,30 +262,33 @@ Array(
 			</div>
 		</div>
 		<div class="row">
-            <?$APPLICATION->IncludeComponent("bitrix:news.line", "blog", Array(
-	"ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
-		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
-		"CACHE_TIME" => "300",	// Время кеширования (сек.)
-		"CACHE_TYPE" => "A",	// Тип кеширования
-		"COMPONENT_TEMPLATE" => ".default",
-		"DETAIL_URL" => "",	// URL, ведущий на страницу с содержимым элемента раздела
-		"FIELD_CODE" => array(	// Поля
+            <?$APPLICATION->IncludeComponent(
+	"bitrix:news.line", 
+	"blog", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "300",
+		"CACHE_TYPE" => "A",
+		"COMPONENT_TEMPLATE" => "blog",
+		"DETAIL_URL" => "",
+		"FIELD_CODE" => array(
 			0 => "",
 			1 => "",
 		),
-		"IBLOCKS" => array(	// Код информационного блока
+		"IBLOCKS" => array(
 			0 => "1",
 		),
-		"IBLOCK_TYPE" => "news",	// Тип информационного блока
-		"NEWS_COUNT" => "3",	// Количество новостей на странице
-		"SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
-		"SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
-		"SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
-		"SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
+		"IBLOCK_TYPE" => "news",
+		"NEWS_COUNT" => "3",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC"
 	),
 	false,
 	array(
-	"ACTIVE_COMPONENT" => "Y"
+		"ACTIVE_COMPONENT" => "Y"
 	)
 );?>
 		</div>
