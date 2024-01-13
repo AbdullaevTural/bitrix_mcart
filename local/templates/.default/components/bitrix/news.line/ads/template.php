@@ -12,17 +12,6 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-
-<div class="site-section site-section-sm bg-light" >
-	<div class="container">
-		<div class="row mb-5">
-			<div class="col-12">
-				<div class="site-section-title">
-					<h2>New Properties for You</h2>
-				</div>
-			</div>
-		</div>
-<div class="row mb-5">
 			
 	<?foreach($arResult["ITEMS"] as $arItem):?>
 		<?
@@ -35,7 +24,7 @@ $this->setFrameMode(true);
  <a href="<?echo $arItem["DETAIL_PAGE_URL"]?>" class="prop-entry d-block"> <figure> <img alt="Image" src="/local/templates/.default/images/img_1.jpg" class="img-fluid"> </figure>
 				<div class="prop-text">
 					<div class="inner">
- <span class="price rounded"><?echo $arItem["DISPLAY_PROPERTIES"]['VALUE']["PRICE"];?></span>
+ <span class="price rounded"><?= $arItem["PROPERTY_PRICE_VALUE"]; ?></span>
 						<h3 class="title"><?echo $arItem["NAME"]?></h3>
 						<p class="location">
 							 <?echo $arItem["DISPLAY_ACTIVE_FROM"]?>
@@ -44,20 +33,19 @@ $this->setFrameMode(true);
 					<div class="prop-more-info">
 						<div class="inner d-flex">
 							<div class="col">
-<?=GetMessage("AREA");?>
+Area: <strong><?= $arItem["PROPERTY_TOTAL_AREA_VALUE"]; ?>м<sup>2</sup></strong>
 
 							</div>
 							<div class="col">
-<?=GetMessage("Beds");?>
+Floors: <strong><?= $arItem["PROPERTY_NUMBER_FLOORS_VALUE"]; ?></strong>
 
 							</div>
 							<div class="col">
-<?=GetMessage("Baths");?>
+Bath: <strong><?= $arItem["PROPERTY_N_BATHROOMS_VALUE"]; ?></strong>
 
 							</div>
 							<div class="col">
-<?=GetMessage("Garages");?>
-
+Garages: <strong><?= $arItem["PROPERTY_GARAGE_VALUE"]; ?></strong>
 							</div>
 						</div>
 					</div>
@@ -66,7 +54,4 @@ $this->setFrameMode(true);
 			</div>
 
 <?endforeach;?>
-</div>
-</div>
-	</div>
 

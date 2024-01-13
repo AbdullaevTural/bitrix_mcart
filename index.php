@@ -68,9 +68,9 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 	"ACTIVE_COMPONENT" => "N"
 	)
 );?><?$APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"slider",
-	Array(
+	"bitrix:news.list", 
+	"slider", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -83,7 +83,7 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
-		"COMPONENT_TEMPLATE" => ".default",
+		"COMPONENT_TEMPLATE" => "slider",
 		"DETAIL_URL" => "",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
@@ -91,7 +91,10 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(0=>"",1=>"",),
+		"FIELD_CODE" => array(
+			0 => "DETAIL_PICTURE",
+			1 => "",
+		),
 		"FILTER_NAME" => "arrFilter",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "6",
@@ -110,7 +113,10 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(0=>"",1=>"",),
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -124,10 +130,10 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N"
 	),
-false,
-Array(
-	'ACTIVE_COMPONENT' => 'Y'
-)
+	false,
+	array(
+		"ACTIVE_COMPONENT" => "Y"
+	)
 );?>
 <div class="py-5">
 	<div class="container">
@@ -180,6 +186,16 @@ Array(
 		</div>
 	</div>
 </div>
+<div class="site-section site-section-sm bg-light" >
+	<div class="container">
+		<div class="row mb-5">
+			<div class="col-12">
+				<div class="site-section-title">
+					<h2>New Properties for You</h2>
+				</div>
+			</div>
+		</div>
+<div class="row mb-5">
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.line", 
 	"ads", 
@@ -192,7 +208,11 @@ Array(
 		"DETAIL_URL" => "",
 		"FIELD_CODE" => array(
 			0 => "",
-			1 => "",
+			1 => "PROPERTY_PRICE",
+			2 => "PROPERTY_TOTAL_AREA",
+			3 => "PROPERTY_GARAGE",
+4 => "PROPERTY_N_BATHROOMS",
+5 => "PROPERTY_NUMBER_FLOORS",
 		),
 		"IBLOCKS" => array(
 			0 => "6",
@@ -209,6 +229,9 @@ Array(
 		"ACTIVE_COMPONENT" => "Y"
 	)
 );?>
+</div>
+</div>
+</div>
 <div class="site-section">
 	<div class="container">
 		<div class="row justify-content-center">
@@ -273,8 +296,9 @@ Array(
 		"COMPONENT_TEMPLATE" => "blog",
 		"DETAIL_URL" => "",
 		"FIELD_CODE" => array(
-			0 => "",
+			0 => "PREVIEW_TEXT",
 			1 => "",
+			2 => "",
 		),
 		"IBLOCKS" => array(
 			0 => "1",

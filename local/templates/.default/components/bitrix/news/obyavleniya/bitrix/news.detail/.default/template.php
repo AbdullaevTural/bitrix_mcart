@@ -14,13 +14,13 @@ $this->setFrameMode(true);
 ?>
 
 <div class="news-detail">  
-<div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+<div class="site-blocks-cover overlay" style="background-image: url('<?=$arResult["DETAIL_PICTURE"]["SRC"]?>')" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
           <div class="col-md-10">
             <span class="d-inline-block text-white px-3 mb-3 property-offer-type rounded">Property Details of</span>
-            <h1 class="mb-2">625 S. Berendo St</h1>
-            <p class="mb-5"><strong class="h2 text-success font-weight-bold">$1,000,500</strong></p>
+            <h1 class="mb-2"><?=$arResult["NAME"]?></h1>
+            <p class="mb-5"><strong class="h2 text-success font-weight-bold"><?= $arResult["PROPERTY_PRICE_VALUE"]; ?> ₽</strong></p>
           </div>
         </div>
       </div>
@@ -32,31 +32,31 @@ $this->setFrameMode(true);
           <div class="col-lg-8" style="margin-top: -150px;">
             <div class="mb-5">
               <div class="slide-one-item home-slider owl-carousel">
-                <div><img src="images/img_1.jpg" alt="Image" class="img-fluid"></div>
-                <div><img src="images/img_2.jpg" alt="Image" class="img-fluid"></div>
-                <div><img src="images/img_3.jpg" alt="Image" class="img-fluid"></div>
+                <div><img src="/local/templates/.default/images/img_1.jpg" alt="Image" class="img-fluid"></div>
+                <div><img src="/local/templates/.default/images/img_2.jpg" alt="Image" class="img-fluid"></div>
+                <div><img src="/local/templates/.default/images/img_3.jpg" alt="Image" class="img-fluid"></div>
               </div>
             </div>
             <div class="bg-white">
               <div class="row mb-5">
                 <div class="col-md-6">
-                  <strong class="text-success h1 mb-3">$1,000,500</strong>
+                  <strong class="text-success h1 mb-3"><?= $arResult["PROPERTY_PRICE_VALUE"]; ?> ₽</strong>
                 </div>
                 <div class="col-md-6">
                   <ul class="property-specs-wrap mb-3 mb-lg-0  float-lg-right">
                   <li>
-                    <span class="property-specs">Beds</span>
-                    <span class="property-specs-number">2 <sup>+</sup></span>
+                    <span class="property-specs">Дата обновления</span>
+                    <span class="property-specs-number"><?= $arResult["TIMESTAMP_X"]; ?></span>
+
+                  </li>
+                  <li>
+                    <span class="property-specs"> Количество этажей</span>
+                    <span class="property-specs-number"><?= $arResult["PROPERTY_NUMBER_FLOORS_VALUE"]; ?></span>
                     
                   </li>
                   <li>
-                    <span class="property-specs">Baths</span>
-                    <span class="property-specs-number">2</span>
-                    
-                  </li>
-                  <li>
-                    <span class="property-specs">SQ FT</span>
-                    <span class="property-specs-number">7,000</span>
+                    <span class="property-specs">Общая площадь</span>
+                    <span class="property-specs-number"><?= $arResult["PROPERTY_TOTAL_AREA_VALUE"]; ?>м<sup>2</sup></span>
                     
                   </li>
                 </ul>
@@ -64,64 +64,62 @@ $this->setFrameMode(true);
               </div>
               <div class="row mb-5">
                 <div class="col-md-6 col-lg-4 text-left border-bottom border-top py-3">
-                  <span class="d-inline-block text-black mb-0 caption-text">Home Type</span>
-                  <strong class="d-block">Condo</strong>
+                  <span class="d-inline-block text-black mb-0 caption-text">Количество санузлов</span>
+                  <strong class="d-block"><?= $arResult["PROPERTY_N_BATHROOMS_VALUE"]; ?></strong>
                 </div>
                 <div class="col-md-6 col-lg-4 text-left border-bottom border-top py-3">
-                  <span class="d-inline-block text-black mb-0 caption-text">Year Built</span>
-                  <strong class="d-block">2018</strong>
-                </div>
-                <div class="col-md-6 col-lg-4 text-left border-bottom border-top py-3">
-                  <span class="d-inline-block text-black mb-0 caption-text">Price/Sqft</span>
-                  <strong class="d-block">$520</strong>
+                  <span class="d-inline-block text-black mb-0 caption-text">Наличие гаража</span>
+                  <strong class="d-block"><?= $arResult["PROPERTY_GARAGE_VALUE"]; ?></strong>
                 </div>
               </div>
               <h2 class="h4 text-black">More Info</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.</p>
-              <p>Nisi voluptatum error ipsum repudiandae, autem deleniti, velit dolorem enim quaerat rerum incidunt sed, qui ducimus! Tempora architecto non, eligendi vitae dolorem laudantium dolore blanditiis assumenda in eos hic unde.</p>
-              <p>Voluptatum debitis cupiditate vero tempora error fugit aspernatur sint veniam laboriosam eaque eum, et hic odio quibusdam molestias corporis dicta! Beatae id magni, laudantium nulla iure ea sunt aliquam.</p>
-
+              <p><?= $arResult["DETAIL_TEXT"]; ?></p>
               <div class="row mt-5">
                 <div class="col-12">
                   <h2 class="h4 text-black mb-3">Property Gallery</h2>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_1.jpg" class="image-popup gal-item"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_2.jpg" class="image-popup gal-item"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_3.jpg" class="image-popup gal-item"><img src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_4.jpg" class="image-popup gal-item"><img src="images/img_4.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_5.jpg" class="image-popup gal-item"><img src="images/img_5.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_6.jpg" class="image-popup gal-item"><img src="images/img_6.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_7.jpg" class="image-popup gal-item"><img src="images/img_7.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_8.jpg" class="image-popup gal-item"><img src="images/img_8.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_1.jpg" class="image-popup gal-item"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_2.jpg" class="image-popup gal-item"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_3.jpg" class="image-popup gal-item"><img src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="images/img_4.jpg" class="image-popup gal-item"><img src="images/img_4.jpg" alt="Image" class="img-fluid"></a>
-                </div>
+           <?php if (!empty($arResult['PROPERTIES']['GALLERY']['VALUE'])): /* галерея изображений к статье блога */ ?>
+    <?php foreach ($arResult['PROPERTIES']['GALLERY']['VALUE'] as $item): ?>
+<div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <?php
+        // путь к изображению от корня сайта
+        $image = CFile::GetPath($item);
+        // создаем превьюшку изображения
+        $thumb = CFile::ResizeImageGet(
+            $item,
+            array('width' => 160, 'height' => 160)
+        );
+        ?>
+        <a href="<?= $image; ?>"><img src="<?= $thumb['src']; ?>" alt="" /></a>
+    </div>
+    <?php endforeach; ?>
+<?php endif; ?>
               </div>
+<div class="row mb-5"> 
+<div class="col-12">
+                  <h2 class="h4 text-black mb-3">Дополнительные материалы</h2>
+</div>
+<?		
+$res = CIBlockElement::GetProperty($arResult['IBLOCK_ID'], $arResult['ID'], "sort", "asc", array("CODE" => "SUPPLEMENTARY"));
+if ($ob = $res->GetNext())
+    {			
+$INSTRUCTION_VALUE = $ob['VALUE'];
+$file = CFile::GetFileArray($INSTRUCTION_VALUE);
+$INSTRUCTION_SRC = $file['SRC'];
+    }
+?>
+<a href="<?=$INSTRUCTION_SRC;?>">Инструкция</a>
+</div>
+<div class="row mb-5"> 
+  <div class="col-12">
+                    <h2 class="h4 text-black mb-3">Ссылки на внешние ресурсы</h2>
+
+  <a href="<?=$arResult["PROPERTY_LINKS_VALUE"] ?>" class="service text-center border rounded">
+  <p>
+        <span class="read-more"><?= $arResult["PROPERTY_LINKS_VALUE"]; ?></span>
+    </p>
+    </a>
+  </div></div>
             </div>
           </div>
           <div class="col-lg-4 pl-md-5">

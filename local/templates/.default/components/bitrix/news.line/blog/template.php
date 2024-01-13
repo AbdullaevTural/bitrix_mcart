@@ -22,9 +22,9 @@ $this->setFrameMode(true);
  <a href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><img alt="Image" src="/local/templates/.default/images/img_4.jpg" class="img-fluid"></a>
 				<div class="p-4 bg-white">
  <span class="d-block text-secondary small text-uppercase"><?echo $arItem["DISPLAY_ACTIVE_FROM"]?></span>
-					<h2 class="h5 text-black mb-3"><a href="#"><?echo $arItem["NAME"]?></a></h2>
+					<h2 class="h5 text-black mb-3"><a href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><?echo $arItem["NAME"]?></a></h2>
 					<p>
-						<?=GetMessage("TEXT_LOREM");?>
+<?= $arItem["PREVIEW_TEXT"]; ?>
 					</p>
 				</div>
 </div>

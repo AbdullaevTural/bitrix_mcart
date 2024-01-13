@@ -96,9 +96,9 @@ $APPLICATION->SetTitle("Объявления ");
 	</div>
 </div>
  <?$APPLICATION->IncludeComponent(
-	"bitrix:news",
-	"obyavleniya",
-	Array(
+	"bitrix:news", 
+	"obyavleniya", 
+	array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -118,11 +118,31 @@ $APPLICATION->SetTitle("Объявления ");
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
-		"DETAIL_FIELD_CODE" => array(0=>"",1=>"",),
+		"DETAIL_FIELD_CODE" => array(
+			0 => "DETAIL_PICTURE",
+			1 => "TIMESTAMP_X",
+			2 => "PROPERTY_NUMBER_FLOORS",
+			3 => "PROPERTY_TOTAL_AREA",
+			4 => "PROPERTY_PRICE",
+			5 => "PROPERTY_GARAGE",
+			6 => "PROPERTY_N_BATHROOMS",
+			7 => "PROPERTY_GALLERY_VALUE",
+			8 => "PROPERTY_LINKS",
+		),
 		"DETAIL_PAGER_SHOW_ALL" => "Y",
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
-		"DETAIL_PROPERTY_CODE" => array(0=>"",1=>"",),
+		"DETAIL_PROPERTY_CODE" => array(
+			0 => "N_BATHROOMS",
+			1 => "NUMBER_FLOORS",
+			2 => "GARAGE",
+			3 => "TOTAL_AREA",
+			4 => "PRIORITY_DEAL",
+			5 => "PRICE",
+			6 => "PROPERTY_PRICE",
+			7 => "PROPERTY_NUMBER_FLOORS",
+8 => "PROPERTY_LINKS",
+		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_AS_RATING" => "rating",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
@@ -139,8 +159,20 @@ $APPLICATION->SetTitle("Объявления ");
 		"IBLOCK_TYPE" => "ads",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"LIST_FIELD_CODE" => array(0=>"",1=>"",),
-		"LIST_PROPERTY_CODE" => array(0=>"",1=>"",),
+		"LIST_FIELD_CODE" => array(
+			0 => "DETAIL_PICTURE",
+			1 => "PROPERTY_PRICE",
+			2 => "PROPERTY_TOTAL_AREA",
+			3 => "PROPERTY_GARAGE",
+			4 => "PROPERTY_N_BATHROOMS",
+			5 => "PROPERTY_NUMBER_FLOORS",
+			6 => "",
+		),
+		"LIST_PROPERTY_CODE" => array(
+			0 => "PROPERTY_PRICE",
+			1 => "PROPERTY_PRICE",
+			2 => "PROPERTY_NUMBER_FLOORS",
+		),
 		"LIST_USE_SHARE" => "",
 		"MEDIA_PROPERTY" => "",
 		"MESSAGE_404" => "",
@@ -178,6 +210,10 @@ $APPLICATION->SetTitle("Объявления ");
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
-		"VARIABLE_ALIASES" => array("SECTION_ID"=>"SECTION_ID","ELEMENT_ID"=>"ELEMENT_ID",)
-	)
+		"VARIABLE_ALIASES" => array(
+			"SECTION_ID" => "SECTION_ID",
+			"ELEMENT_ID" => "ELEMENT_ID",
+		)
+	),
+	false
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
