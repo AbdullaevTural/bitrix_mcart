@@ -12,7 +12,14 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-			
+				<div class="row mb-5">
+			<div class="col-12">
+				<div class="site-section-title">
+					<h2><?echo GetMessage('PROPER')?></h2>
+				</div>
+			</div>
+		</div>
+<div class="row mb-5">
 	<?foreach($arResult["ITEMS"] as $arItem):?>
 		<?
 		$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
@@ -21,7 +28,7 @@ $this->setFrameMode(true);
     <div class="col-md-6 col-lg-4 mb-4" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 
 
- <a href="<?echo $arItem["DETAIL_PAGE_URL"]?>" class="prop-entry d-block"> <figure> <img alt="Image" src="/local/templates/.default/images/img_1.jpg" class="img-fluid"> </figure>
+ <a href="<?echo $arItem["DETAIL_PAGE_URL"]?>" class="prop-entry d-block"> <figure> <img alt="Image" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" class="img-fluid"> </figure>
 				<div class="prop-text">
 					<div class="inner">
  <span class="price rounded"><?= $arItem["PROPERTY_PRICE_VALUE"]; ?></span>
@@ -32,21 +39,23 @@ $this->setFrameMode(true);
 					</div>
 					<div class="prop-more-info">
 						<div class="inner d-flex">
-							<div class="col">
-Area: <strong><?= $arItem["PROPERTY_TOTAL_AREA_VALUE"]; ?>м<sup>2</sup></strong>
+						<div class="col">
+<?echo GetMessage('AREA')?> <strong><?= $arItem["PROPERTY_TOTAL_AREA_VALUE"]; ?>м<sup>2</sup></strong>
 
 							</div>
 							<div class="col">
-Floors: <strong><?= $arItem["PROPERTY_NUMBER_FLOORS_VALUE"]; ?></strong>
+<?echo GetMessage('FLOOR')?> <strong><?= $arItem["PROPERTY_NUMBER_FLOORS_VALUE"]; ?></strong>
 
 							</div>
 							<div class="col">
-Bath: <strong><?= $arItem["PROPERTY_N_BATHROOMS_VALUE"]; ?></strong>
+							<?echo GetMessage('BATH')?> <strong><?= $arItem["PROPERTY_N_BATHROOMS_VALUE"]; ?></strong>
 
 							</div>
+<?if(!empty($arItem["PROPERTY_GARAGE_VALUE"])):?>
 							<div class="col">
-Garages: <strong><?= $arItem["PROPERTY_GARAGE_VALUE"]; ?></strong>
+							<?echo GetMessage('GARAGE')?> <strong><?= $arItem["PROPERTY_GARAGE_VALUE"]; ?></strong>
 							</div>
+<?endif?>
 						</div>
 					</div>
 				</div>
@@ -54,4 +63,5 @@ Garages: <strong><?= $arItem["PROPERTY_GARAGE_VALUE"]; ?></strong>
 			</div>
 
 <?endforeach;?>
+</div>
 

@@ -12,7 +12,7 @@ if(empty($arResult))
 	return "";
 
 $strReturn = '';
-
+$pageTitle = $APPLICATION->GetProperty('TITLE');
 //we can't use $APPLICATION->SetAdditionalCSS() here because we are inside the buffered function GetNavChain()
 $css = $APPLICATION->GetCSSArray();
 if(!is_array($css) || !in_array("/bitrix/css/main/font-awesome.css", $css))
@@ -22,7 +22,7 @@ if(!is_array($css) || !in_array("/bitrix/css/main/font-awesome.css", $css))
 
 $strReturn .= '<div class="row align-items-center justify-content-center text-center">
 			<div class="col-md-10">
-				<h1 class="mb-2">About Us</h1>
+				<h1 class="mb-2">'.$pageTitle.'</h1>
 				<div>';
 
 $itemSize = count($arResult);

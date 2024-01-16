@@ -188,14 +188,6 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 </div>
 <div class="site-section site-section-sm bg-light" >
 	<div class="container">
-		<div class="row mb-5">
-			<div class="col-12">
-				<div class="site-section-title">
-					<h2>New Properties for You</h2>
-				</div>
-			</div>
-		</div>
-<div class="row mb-5">
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.line", 
 	"ads", 
@@ -207,12 +199,13 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 		"COMPONENT_TEMPLATE" => "ads",
 		"DETAIL_URL" => "",
 		"FIELD_CODE" => array(
-			0 => "",
+			0 => "PREVIEW_PICTURE",
 			1 => "PROPERTY_PRICE",
 			2 => "PROPERTY_TOTAL_AREA",
 			3 => "PROPERTY_GARAGE",
-4 => "PROPERTY_N_BATHROOMS",
-5 => "PROPERTY_NUMBER_FLOORS",
+			4 => "PROPERTY_N_BATHROOMS",
+			5 => "PROPERTY_NUMBER_FLOORS",
+			6 => "",
 		),
 		"IBLOCKS" => array(
 			0 => "6",
@@ -231,18 +224,9 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 );?>
 </div>
 </div>
-</div>
 <div class="site-section">
 	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-md-7 text-center mb-5">
-				<div class="site-section-title">
-					<h2>Our Services</h2>
-				</div>
-			</div>
-		</div>
-
-<?$APPLICATION->IncludeComponent(
+	<?$APPLICATION->IncludeComponent(
 	"bitrix:news.line", 
 	"services", 
 	array(
@@ -277,14 +261,7 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 	</div>
 <div class="site-section bg-light">
 	<div class="container">
-		<div class="row justify-content-center mb-5">
-			<div class="col-md-7 text-center">
-				<div class="site-section-title">
-					<h2>Our Blog</h2>
-				</div>
-			</div>
-		</div>
-		<div class="row">
+		
             <?$APPLICATION->IncludeComponent(
 	"bitrix:news.line", 
 	"blog", 
@@ -297,7 +274,7 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 		"DETAIL_URL" => "",
 		"FIELD_CODE" => array(
 			0 => "PREVIEW_TEXT",
-			1 => "",
+			1 => "PREVIEW_PICTURE",
 			2 => "",
 		),
 		"IBLOCKS" => array(
@@ -315,7 +292,7 @@ $GLOBALS['arrFilter']= array('PROPERTY_PRIORITY_DEAL_VALUE' => 'да');
 		"ACTIVE_COMPONENT" => "Y"
 	)
 );?>
-		</div>
+		
 	</div>
 </div>
 

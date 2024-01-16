@@ -12,6 +12,13 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+	<div class="row justify-content-center">
+			<div class="col-md-7 text-center mb-5">
+				<div class="site-section-title">
+					<h2><?echo GetMessage('SERVICES')?></h2>
+				</div>
+			</div>
+		</div>
 <div class="row">
 	<?foreach($arResult["ITEMS"] as $arItem):?>
 		<?

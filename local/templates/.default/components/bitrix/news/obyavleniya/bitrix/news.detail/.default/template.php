@@ -10,6 +10,7 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
+IncludeTemplateLangFile(__FILE__);
 $this->setFrameMode(true);
 ?>
 
@@ -18,7 +19,7 @@ $this->setFrameMode(true);
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
           <div class="col-md-10">
-            <span class="d-inline-block text-white px-3 mb-3 property-offer-type rounded">Property Details of</span>
+            <span class="d-inline-block text-white px-3 mb-3 property-offer-type rounded"><?echo GetMessage('DETAILS')?></span>
             <h1 class="mb-2"><?=$arResult["NAME"]?></h1>
             <p class="mb-5"><strong class="h2 text-success font-weight-bold"><?= $arResult["PROPERTY_PRICE_VALUE"]; ?> ₽</strong></p>
           </div>
@@ -45,17 +46,17 @@ $this->setFrameMode(true);
                 <div class="col-md-6">
                   <ul class="property-specs-wrap mb-3 mb-lg-0  float-lg-right">
                   <li>
-                    <span class="property-specs">Дата обновления</span>
+                    <span class="property-specs"><?echo GetMessage('DATE')?></span>
                     <span class="property-specs-number"><?= $arResult["TIMESTAMP_X"]; ?></span>
 
                   </li>
                   <li>
-                    <span class="property-specs"> Количество этажей</span>
+                    <span class="property-specs"> <?echo GetMessage('COUNT_F')?></span>
                     <span class="property-specs-number"><?= $arResult["PROPERTY_NUMBER_FLOORS_VALUE"]; ?></span>
                     
                   </li>
                   <li>
-                    <span class="property-specs">Общая площадь</span>
+                    <span class="property-specs"><?echo GetMessage('AREA')?></span>
                     <span class="property-specs-number"><?= $arResult["PROPERTY_TOTAL_AREA_VALUE"]; ?>м<sup>2</sup></span>
                     
                   </li>
@@ -64,19 +65,19 @@ $this->setFrameMode(true);
               </div>
               <div class="row mb-5">
                 <div class="col-md-6 col-lg-4 text-left border-bottom border-top py-3">
-                  <span class="d-inline-block text-black mb-0 caption-text">Количество санузлов</span>
+                  <span class="d-inline-block text-black mb-0 caption-text"><?echo GetMessage('COUNT_B')?></span>
                   <strong class="d-block"><?= $arResult["PROPERTY_N_BATHROOMS_VALUE"]; ?></strong>
                 </div>
                 <div class="col-md-6 col-lg-4 text-left border-bottom border-top py-3">
-                  <span class="d-inline-block text-black mb-0 caption-text">Наличие гаража</span>
+                  <span class="d-inline-block text-black mb-0 caption-text"><?echo GetMessage('GARAGE')?></span>
                   <strong class="d-block"><?= $arResult["PROPERTY_GARAGE_VALUE"]; ?></strong>
                 </div>
               </div>
-              <h2 class="h4 text-black">More Info</h2>
+              <h2 class="h4 text-black"><?echo GetMessage('INFO')?><</h2>
               <p><?= $arResult["DETAIL_TEXT"]; ?></p>
               <div class="row mt-5">
                 <div class="col-12">
-                  <h2 class="h4 text-black mb-3">Property Gallery</h2>
+                  <h2 class="h4 text-black mb-3"><?echo GetMessage('GALLERY')?><</h2>
                 </div>
            <?php if (!empty($arResult['PROPERTIES']['GALLERY']['VALUE'])): /* галерея изображений к статье блога */ ?>
     <?php foreach ($arResult['PROPERTIES']['GALLERY']['VALUE'] as $item): ?>
@@ -97,7 +98,7 @@ $this->setFrameMode(true);
               </div>
 <div class="row mb-5"> 
 <div class="col-12">
-                  <h2 class="h4 text-black mb-3">Дополнительные материалы</h2>
+                  <h2 class="h4 text-black mb-3"><?echo GetMessage('DOPS')?></h2>
 </div>
 <?		
 $res = CIBlockElement::GetProperty($arResult['IBLOCK_ID'], $arResult['ID'], "sort", "asc", array("CODE" => "SUPPLEMENTARY"));
@@ -108,11 +109,11 @@ $file = CFile::GetFileArray($INSTRUCTION_VALUE);
 $INSTRUCTION_SRC = $file['SRC'];
     }
 ?>
-<a href="<?=$INSTRUCTION_SRC;?>">Инструкция</a>
+<a href="<?=$INSTRUCTION_SRC;?>"><?echo GetMessage('INSTRUCTION')?></a>
 </div>
 <div class="row mb-5"> 
   <div class="col-12">
-                    <h2 class="h4 text-black mb-3">Ссылки на внешние ресурсы</h2>
+                    <h2 class="h4 text-black mb-3"><?echo GetMessage('RESURS')?></h2>
 
   <a href="<?=$arResult["PROPERTY_LINKS_VALUE"] ?>" class="service text-center border rounded">
   <p>

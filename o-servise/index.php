@@ -1,5 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("title", "О сервисе");
 $APPLICATION->SetTitle("О сервисе");
 ?><div class="site-section border-bottom">
 	<div class="container">

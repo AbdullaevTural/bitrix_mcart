@@ -10,6 +10,7 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
+IncludeTemplateLangFile(__FILE__);
 $this->setFrameMode(true);
 ?>
 
@@ -21,7 +22,7 @@ $this->setFrameMode(true);
 		<div class="row mb-5">
 			<div class="col-12">
 				<div class="site-section-title">
-					<h2>New Properties for You</h2>
+					<h2> <?echo GetMessage('NEW_PROPERTIES')?></h2>
 				</div>
 			</div>
 		</div>
@@ -35,7 +36,7 @@ $this->setFrameMode(true);
      <div class="col-md-6 col-lg-4 mb-4" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 
 
- <a href="<?echo $arItem["DETAIL_PAGE_URL"]?>" class="prop-entry d-block"> <figure> <img alt="Image" src="/local/templates/.default/images/img_1.jpg" class="img-fluid"> </figure>
+ <a href="<?echo $arItem["DETAIL_PAGE_URL"]?>" class="prop-entry d-block"> <figure> <img alt="Image" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" class="img-fluid"> </figure>
 				<div class="prop-text">
 					<div class="inner">
  <span class="price rounded"><?= $arItem["PROPERTY_PRICE_VALUE"]; ?></span>
@@ -47,20 +48,22 @@ $this->setFrameMode(true);
 					<div class="prop-more-info">
 						<div class="inner d-flex">
 							<div class="col">
-Area: <strong><?= $arItem["PROPERTY_TOTAL_AREA_VALUE"]; ?>м<sup>2</sup></strong>
+<?echo GetMessage('AREA')?> <strong><?= $arItem["PROPERTY_TOTAL_AREA_VALUE"]; ?>м<sup>2</sup></strong>
 
 							</div>
 							<div class="col">
-Floors: <strong><?= $arItem["PROPERTY_NUMBER_FLOORS_VALUE"]; ?></strong>
+<?echo GetMessage('FLOOR')?> <strong><?= $arItem["PROPERTY_NUMBER_FLOORS_VALUE"]; ?></strong>
 
 							</div>
 							<div class="col">
-Bath: <strong><?= $arItem["PROPERTY_N_BATHROOMS_VALUE"]; ?></strong>
+							<?echo GetMessage('BATH')?> <strong><?= $arItem["PROPERTY_N_BATHROOMS_VALUE"]; ?></strong>
 
 							</div>
+<?if(!empty($arItem["PROPERTY_GARAGE_VALUE"])):?>
 							<div class="col">
-Garages: <strong><?= $arItem["PROPERTY_GARAGE_VALUE"]; ?></strong>
+							<?echo GetMessage('GARAGE')?> <strong><?= $arItem["PROPERTY_GARAGE_VALUE"]; ?></strong>
 							</div>
+<?endif?>
 						</div>
 					</div>
 				</div>

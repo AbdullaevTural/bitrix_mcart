@@ -78,3 +78,15 @@ if (($arCurrentValues['USE_SHARE'] ?? 'N') === 'Y')
 		"DEFAULT" => "",
 	);
 }
+$arComponentParameters  = array(
+     'SLIDER_EFFECT' =>  array(
+         'NAME'      =>  'Эффект смены слайдов',
+         'TYPE'      =>  'LIST',
+         'SORT'      =>  '10',
+         'VALUES'    =>  array(
+             'sliding'   =>  'Скольжение',
+             'fading'    =>  'Затухание',
+         ),
+         'MULTIPLE'  =>  'N',
+     ),
+ );
